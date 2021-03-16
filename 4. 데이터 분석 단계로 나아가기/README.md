@@ -47,6 +47,7 @@ SELECT * FROM copang_main.member
 
 ```sql
 SELECT * FROM copang_main.member WHERE email = 'codeit@naver.com';
+
 ```
 
 > 대문자로 작성된 내용은 MySQL에서 원래부터 존재하는 **예약어**이며 그 외에 내용은 **사용자가 지정한 부분**입니다.
@@ -88,10 +89,9 @@ SELECT * FROM member;
 
 ```sql
 SELECT * FROM copang_main.member
-        WHERE age BETWEEN 20 AND 30;
-        
+        WHERE age BETWEEN 20 AND 30
 SELECT * FROM copang_main.member
-        WHERE age NOT BETWEEN 20 AND 30;
+        WHERE age NOT BETWEEN 20 AND 30
 ```
 
 
@@ -151,85 +151,7 @@ SELECT * FROM copang_main.member WHERE email LIKE 'c_____@%';
 
 ## 📌 DATE 데이터 타입 관련 함수
 
-### DATE 타입의 값에서 연도(year)만, 혹은 월(month)만, 혹은 일(day)만 추출할 수 있습니다.
-
-### 1️⃣ 연도, 월, 일 추출하기
-
-```sql
-SELECT * FROM copang_main.member WHERE YEAR(birthday) = '1992';
-SELECT * FROM copang_main.member WHERE MONTH(sign_up_day) IN (6, 7, 8);
-SELECT * FROM copang_main.member WHERE DAYOFMONTH(sign_up_day) BETWEEN 15 AND 31;
-```
-
-> **YEAR 함수**를 사용하면 날짜 값에서 연도만 뽑아낼 수 있습니다.
->
-> **MONTH 함수**를 사용하면 날짜 값에서 월만 뽑아낼 수 있습니다.
->
-> **DAYOFMONTH 함수**를 사용하면 날짜 값에서 일만 뽑아낼 수 있습니다.
-
-
-
-### 2️⃣ 날짜 간의 차이 구하기
-
-```sql
-SELECT * FROM copang_main.member WHERE MONTH(sign_up_day) IN (6, 7, 8);
-```
-
-> **DAYEDIFF 함수** 날짜 간의 차이를 구하는 함수
->
-> **DATEDIFF(날짜 a, 날짜 b)**를 사용하면 **'날짜 a - 날짜 b'**를 해서 그 차이 일수를 알려준다.
->
-> **CURDATE()** 오늘 날짜를 구하는 함수
-
-
-
-### 3️⃣ 날짜 더하기 빼기
-
-```sql
-SELECT email, sign_up_day, DATE_ADD(sign_up_day, INTERVAL 300 DAY)
-  FROM copang_main.member;
-  
-SELECT email, sign_up_day, DATE_SUB(sign_up_day, INTERVAL 250 DAY)
-  FROM copang_main.member;
-```
-
-> 더하는 함수 **DATE_ADD()**, 빼는 함수 **DATE_SUB()**
->
-> 각각 INTERVAL 300 DAY ,INTERVAL 250 DAY 300일을 더하고 빼는 함수를 예를 들었습니다.
-
-
-
-### 4️⃣ UNIX Timestamp 값
-
-```sql
-SELECT email, sign_up_day, UNIX_TUMESTAMP(sign_up_day)
-  FROM copang_main.member;
-  
-SELECT email, sign_up_day, FROM_UNIXTIME(UNIX_TUMESTAMP(sign_up_day))
-  FROM copang_main.member;
-```
-
-> 시간까지 포함하는 컬럼이라면 DATETIME이라는 데이터 타입을 사용해야한다.
->
-> DATETIME 타입의 컬럼에는 보통 '2021-03-10 20:26:59'이런식으로 값들이 저장되어 있다.
->
-> 하지만 1553526000 이런 식으로 상당히 큰 숫자값이 적혀있는 경우들이 많은데 이런 형식의 날짜시간 값을 UNIX Timestamp라고 합니다. UXIT Timestamp는 특정 날짜의 특정 시간을, 1970년 1월 1일 기준으로 총 몇초가 지났는지로 나타낸 값입니다.
->
-> 날짜 형태로 바꾸려면 **FROM_UNIXTIME 함수**를 사용하면 됩니다.
-
-### 💡 MySQL 공식 메뉴얼 참조
-
-> 날짜, 시간 관련 데이터 타입 : https://dev.mysql.com/doc/refman/8.0/en/date-and-time-types.html
->
-> 날짜, 시간 관련 함수 : https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html
-
-
-
-----
-
-
-
-
+### 1️⃣ 범위 조회 BETWEEN a AND b (a부터 b까지)
 
 #### 💡기본으로 **ASC** (ascending) 오름차순 
 
