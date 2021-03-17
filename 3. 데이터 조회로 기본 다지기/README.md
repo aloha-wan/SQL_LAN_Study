@@ -1,4 +1,4 @@
-## 📌 데이터 조회의 핵심, SELECT 와 WHERE
+# 📌 데이터 조회의 핵심, SELECT 와 WHERE
 
 ### 🔎 SELECT 테이블의 데이터를 조회할 때 사용하는 구문
 
@@ -22,7 +22,7 @@
 
 </br>
 
-## 📌 SQL 작성 형식
+# 📌 SQL 작성 형식
 
 ### 1️⃣  SQL 문에는 항상 세미콜론을 사용해야한다. ❗❗
 
@@ -78,7 +78,7 @@ SELECT * FROM member;
 
 </br>
 
-## 📌 조건 표현식
+# 📌 조건 표현식
 
 ### 1️⃣ 범위 조회 BETWEEN a AND b (a부터 b까지)
 
@@ -149,7 +149,7 @@ SELECT * FROM copang_main.member WHERE email LIKE 'c_____@%';
 
 </br>
 
-## 📌 DATE 데이터 타입 관련 함수
+# 📌 DATE 데이터 타입 관련 함수
 
 ### DATE 타입의 값에서 연도(year)만, 혹은 월(month)만, 혹은 일(day)만 추출할 수 있습니다.
 
@@ -229,7 +229,7 @@ SELECT email, sign_up_day, FROM_UNIXTIME(UNIX_TUMESTAMP(sign_up_day))
 
 </br>
 
-## 📌 여러 조건을 걸 때 주의할 점
+# 📌 여러 조건을 걸 때 주의할 점
 
 </br>
 
@@ -277,7 +277,7 @@ SELECT * FROM copang_main.member
 
 </br>
 
-## 📌 문자열 패턴 매칭 조건을 사용할 때 주의할 점
+# 📌 문자열 패턴 매칭 조건을 사용할 때 주의할 점
 
 ### 🔎 정렬  : row들을 특정 컬럼을 기준으로 순서대로 출력
 
@@ -307,7 +307,7 @@ SELECT * FROM copang_main.member
 
 </br>
 
-## 📌 데이터 정렬해서 보기
+# 📌 데이터 정렬해서 보기
 
 ### 🔎 정렬  : row들을 특정 컬럼을 기준으로 순서대로 출력
 
@@ -343,7 +343,7 @@ ORDER BY YEAR(sign_up_day) DESC, email ASC;
 
 </br>
 
-## 📌 정렬할 때 주의할 점
+# 📌 정렬할 때 주의할 점
 
 ### 
 
@@ -359,7 +359,7 @@ ORDER BY YEAR(sign_up_day) DESC, email ASC;
 
 </br>
 
-## 📌 데이터 일부만 추려보기
+# 📌 데이터 일부만 추려보기
 
 ### 🔎 LIMIT  제한, 한도
 
