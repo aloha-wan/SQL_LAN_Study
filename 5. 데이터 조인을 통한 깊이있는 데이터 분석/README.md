@@ -25,21 +25,6 @@ LEFT OUTER JOIN 왼쪽 테이블을 기준으로 해당 값이 있으면 나타�
 
 
 
-
-
-
-
-select substring(it.registration_date, 0, 4) as '등록 연도'
-     , count(re.*) as '리뷰 개수'
-     , avg(re.star) as '별점 평균값'
-  from review re inner join item it on re.item_id = it.id
-    inner join member me on re.mem_id = me.id
- where 1=1
-   and it.gender = 'u'
- group by substring(it.registration_date, 0, 4)
-having count(substring(it.registration_date, 0, 4)) >= 10
- order by avg(re.star)
-
 🌵🔥🌪️🌹🌻🍀🌱💻💡💣💊🎈🧷🔍🔎📌📍🎁🔑🗝️⏱️❓❗⭐
 
 0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟🔼🔽➡️⬅️〰️➰➿🎵🎶❌🚫💢
