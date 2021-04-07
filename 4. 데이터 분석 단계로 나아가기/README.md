@@ -95,13 +95,31 @@ case ~ when ~ then<br>            when ~ then<br>            else<br>end as
 
 </br>
 
-COALESCE(컬럼명,null 일때 변경할 문구)
+### 💡COALESCE(컬럼명,null 일때 변경할 문구)
 
+MySQL에서 NULL을 다른 값으로 변환 할 수 있는 방법이다.
 
+</br>
 
+### 💡IFNULL(컬럼명, 'N/A') 함수 
 
+IFNULL 함수는 첫번째 인자가 null이면 두번째 인자를 표시하고 NULL이 아니면 해당 값을 그대로 표현합니다.
 
+</br>
 
+### 💡IF(컬럼명 IS NOT NULL , 컬럼명 , 'N/A') 함수 
+
+IF함수는 가장 첫번째 인자에 조건식이 나옵니다. 만약 그 조건식의 결과가 TRUE라면 두번째 인자를 리턴하고 False라면 세번째 인자를 리턴 한다.
+
+</br>
+
+### 💡띄어쓰기(스페이스)가 포험된 alias에는 따옴표를 붙여줘야 합니다.
+
+만약 컬럼에 스페이스가 포함된 alias를 붙이고 싶다면, **작은 따옴표**나 **큰 따옴표**를 붙여서 alias부분을 확실하게 표현해주어야 합니다.
+
+'''sql select name as '상품 이름', price from item;
+
+이렇게 하지 않으면 **스페이스를 기준으로 구문 해석이 이루어지는 SQL특성상 에러가 발생**하니까 주의 해야한다.
 
 </br>
 
