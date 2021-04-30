@@ -16,25 +16,41 @@ NULL과 상관없이 COUNT를 하기 위해선 따로 컬럼을 넣지 않고 CO
 
 ### 2️⃣ SUM 함수 - 합계
 
-
+```sql
+SELECT SUM(age) FROM copang_main.member;
+```
 
 </br>
 
 ### 3️⃣ STD 함수 - 표준편차
 
+```sql
+SELECT STD(age) FROM copang_main.member;
+```
 
+산술 함수 중 자주 쓰이는 함수 
+
+**ABS 함수 - 절대값을 구하는 함수**
+
+**SQRT 함수 - 제곱근을 구하는 함수**
+
+**CEIL 함수 - 올림 함수**
 
 </br>
 
 ### 4️⃣ FLOOR 함수 - 내림 함수
 
-
+```sql
+SELECT FLOOR(height) FROM copang_main.member;
+```
 
 </br>
 
 ### 5️⃣ ROUND 함수 - 반올림 함수
 
-
+```sql
+SELECT ROUND(height) FROM copang_main.member;
+```
 
 </br>
 
@@ -53,7 +69,7 @@ MAX 함수를 생각한다면 특정 컬럼의 값 중에서 최댓값을 구하
 
 ## 📌 NULL에 관해 알아야하는 사실
 
-
+</br>
 
 ### IS NULL 과 NULL은 다르다
 
@@ -61,7 +77,7 @@ MAX 함수를 생각한다면 특정 컬럼의 값 중에서 최댓값을 구하
 
 이런 실수를 한다면 아무 row도 출력되지 않는다.
 
-
+</br>
 
 ### NULL은 어떤 연산을 하더라도 NULL 이다.
 
@@ -153,9 +169,9 @@ TRIM, LTRIM, RTRIM 함수
 
 Group by 여러 컬럼을 기준으로 그루핑을 할수 있다.
 
-MAX(컬럼명)함수 : 해당 테이블에 모든 row의 컬럼중 가장 큰 값
-COUNT(컬럼명)함수 : 해당 테이블에 컬럼의 null값을 제외한 갯수
-AVG(컬럼명)함수 : 해당 테이블에 모든 row의 컬럼 평균값
+**Aggregate function(집계함수)**
+
+MAX(컬럼명)함수 : 해당 테이블에 모든 row의 컬럼중 가장 큰 값<br>MIN(컬럼명)함수 : 해당 테이블에 모든 row의 컬럼중 가장 작은 값<br>COUNT(컬럼명)함수 : 해당 테이블에 컬럼의 null값을 제외한 갯수<br>AVG(컬럼명)함수 : 해당 테이블에 모든 row의 컬럼 평균값
 
 HAVING함수 : GROUP BY 를 한 후 WHERE 처럼 조건을 설정 할 수 있다.
 
@@ -168,7 +184,7 @@ HAVING함수 : GROUP BY 를 한 후 WHERE 처럼 조건을 설정 할 수 있다
 1. FROM : 어느 테이블을 대상으로 할 것인지를 먼저 결정합니다. 
 2. WHERE : 해당 테이블에서 특정 조건(들)을 만족하는 row들만 선별합니다. 
 3. GROUP BY : row들을 그루핑 기준대로 그루핑합니다. 하나의 그룹은 하나의 row로 표현됩니다.
-4. HAVING : 그루핑 작업 후 생성된 여러 그룹들 중에서, 특정 조건(들)을 만족하는 그룹들만 선별합니다. 
+4. HAVING : 그루핑 작업 후 생성된 여러 그룹들 중에서, 특정 조건(들)을 만족하는 그룹들만 선별합니다.  (~~을 가지고 있는)
 5. SELECT : 모든 컬럼 또는 특정 컬럼들을 조회합니다. SELECT 절에서 컬럼 이름에 alias를 붙인 게 있다면, 이 이후 단계(ORDER BY, LIMIT)부터는 해당 alias를 사용할 수 있습니다.
 6. ORDER BY : 각 row를 특정 기준에 따라서 정렬합니다. 
 7. LIMIT : 이전 단계까지 조회된 row들 중 일부 row들만을 추립니다. 
@@ -178,15 +194,3 @@ HAVING함수 : GROUP BY 를 한 후 WHERE 처럼 조건을 설정 할 수 있다
 WITH ROLLUP : GROUP BY를 한 다음 사용하며 부분 합계를 내준다.
 
 GROUPING 함수 : 원래 값이 null인지 부분합계를 나타낸 null인지 구분하기 위해 GROUPING 함수를 사용한다.<br>                                      원래 값이 NULL이라면 0 이고, 부분합계를 위해 값이 NULL이라면 1로 값이 나타난다.
-
-
-
-🌵🔥🌪️🌹🌻🍀🌱💻💡💣💊🎈🧷🔍🔎📌📍🎁🔑🗝️⏱️❓❗⭐
-
-0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣🔟🔼🔽➡️⬅️〰️➰➿🎵🎶❌🚫💢
-
-
-
-
-
-
