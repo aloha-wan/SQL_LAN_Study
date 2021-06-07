@@ -1,4 +1,4 @@
-# 💻SQL랜선 스터디 2기(codeit) 8주🔥
+# 💻SQL랜선 스터디 2기(codeit)🔥
 
 </br>
 
